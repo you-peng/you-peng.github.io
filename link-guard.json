@@ -1,0 +1,26 @@
+{
+  "whitelist": {
+    "domains": [
+      "github.com",
+      "gitee.com",
+      "bilibili.com",
+      "api.iconify.design",
+      "gcore.jsdelivr.net",
+      "unpkg.com",
+      "deepseek.com",
+      "baidu.com"
+    ],
+    "prefixes": [],
+    "contains": [
+      "localhost",
+      "127.0.0.1"
+    ]
+  },
+  "config": {
+    "title": "即将离开本站",
+    "description": "您即将访问一个外部链接，请确认链接安全后继续访问。",
+    "buttonText": "继续访问",
+    "cancelText": "返回",
+    "debug": true
+  }
+}

@@ -1,0 +1,405 @@
+/* 自定义 GitHub 用户卡片样式 */
+.widget-wrapper.user-card .widget-body .follow {
+    background: rgb(127, 156, 127) !important;
+}
+
+.widget-wrapper.user-card .widget-body .follow:hover {
+    background: rgb(211, 242, 222) !important;
+}
+
+.widget-wrapper.user-card .widget-body .follow svg {
+    height: 1.5em !important;
+    width: auto !important;
+}
+
+/* 页脚文字居中 */
+.page-footer .text {
+    text-align: center !important;
+}
+
+/* Echo 侧边栏组件样式 */
+.ech0-sidebar-container {
+    font-size: 0.875em;
+    line-height: 1.5;
+}
+
+.ds-memos {
+    font-size: 0.875em;
+    line-height: 1.5;
+}
+
+.memos-loading,
+.memos-error,
+.memos-empty {
+    text-align: center;
+    padding: 12px;
+    color: var(--text-muted);
+}
+
+.memos-error {
+    color: #e74c3c;
+}
+
+.memos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.memos-list::-webkit-scrollbar {
+    display: none;
+}
+
+.memos-item {
+    padding: 8px;
+    background: var(--card);
+    border-radius: var(--radius-card-s);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    position: relative;
+    break-inside: avoid;
+}
+
+.memos-item:hover {
+    border-color: var(--accent);
+    background: var(--card-hover);
+}
+
+.memos-icon {
+    font-size: 1.1em;
+    margin-right: 4px;
+}
+
+/* 图片轮播样式 */
+.memos-image-wrap {
+    position: relative;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.memos-carousel {
+    position: relative;
+    overflow: hidden;
+    max-height: 120px;
+}
+
+.memos-carousel-slides {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.memos-carousel-slide {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.memos-carousel-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: cover;
+}
+
+/* 轮播控制按钮 */
+.memos-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+.memos-carousel:hover .memos-carousel-btn {
+    opacity: 1;
+}
+
+.memos-carousel-prev {
+    left: 4px;
+}
+
+.memos-carousel-next {
+    right: 4px;
+}
+
+.memos-carousel-dots {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+}
+
+.memos-carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.memos-carousel-dot.active {
+    background: white;
+}
+
+/* 扩展内容样式 */
+.memos-extension {
+    padding: 6px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.memos-music {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 182, 193, 0.1) 100%);
+    border-left: 3px solid #ff6b6b;
+}
+
+.memos-video {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(83, 109, 254, 0.1) 100%);
+    border-left: 3px solid #4ecdc4;
+}
+
+.memos-ext-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.memos-ext-label {
+    font-size: 0.75em;
+    color: var(--text-muted);
+}
+
+.memos-ext-player {
+    min-height: 40px;
+}
+
+.memos-ext-link {
+    font-size: 0.8em;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.memos-ext-link:hover {
+    text-decoration: underline;
+}
+
+/* 视频播放样式 */
+.memos-video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    height: 0;
+    overflow: hidden;
+}
+
+.memos-video-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 150px;
+}
+
+.memos-content {
+    color: var(--text);
+    margin-bottom: 4px;
+    word-break: break-word;
+    white-space: pre-wrap;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.memos-empty-text {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.memos-date {
+    display: flex;
+    align-items: center;
+    font-size: 0.7em;
+    color: var(--text-muted);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+.memos-date .memos-icon {
+    font-size: 0.85em;
+    margin-right: 4px;
+}
+
+/* 音乐播放器样式优化 */
+.memos-music .aplayer {
+    margin: 0 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.memos-music .aplayer .aplayer-info {
+    flex: 1 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin-left: 8px !important;
+}
+
+.memos-music .aplayer .aplayer-music {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+}
+
+.memos-music .aplayer .aplayer-pic {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.memos-music .aplayer .aplayer-pic img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.memos-music .aplayer .aplayer-pic .aplayer-button {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 50% !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s !important;
+}
+
+.memos-music .aplayer .aplayer-pic:hover .aplayer-button {
+    opacity: 1 !important;
+}
+
+.memos-music .aplayer .aplayer-pic .aplayer-button svg {
+    width: 10px !important;
+    height: 10px !important;
+    fill: white !important;
+}
+
+.memos-music .aplayer .aplayer-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--text) !important;
+    margin-bottom: 1px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.3 !important;
+}
+
+.memos-music .aplayer .aplayer-author {
+    font-size: 12px !important;
+    color: var(--text-muted) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.3 !important;
+}
+
+.memos-music .aplayer .aplayer-player {
+    display: flex !important;
+    align-items: center !important;
+    padding: 6px 0 0 0 !important;
+    gap: 6px !important;
+}
+
+.memos-music .aplayer .aplayer-bar-wrap {
+    flex: 1 !important;
+    padding: 0 !important;
+}
+
+.memos-music .aplayer .aplayer-bar {
+    height: 3px !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 2px !important;
+    overflow: hidden !important;
+}
+
+.memos-music .aplayer .aplayer-bar .aplayer-loaded {
+    background: rgba(0, 0, 0, 0.15) !important;
+    height: 100% !important;
+}
+
+.memos-music .aplayer .aplayer-bar .aplayer-played {
+    background: var(--accent) !important;
+    height: 100% !important;
+    border-radius: 2px !important;
+}
+
+.memos-music .aplayer .aplayer-bar .aplayer-thumb {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background: var(--accent) !important;
+    border: 2px solid white !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+.memos-music .aplayer .aplayer-time {
+    font-size: 10px !important;
+    color: var(--text-muted) !important;
+    min-width: 60px !important;
+    text-align: right !important;
+    margin-left: auto !important;
+}
+
+.memos-music .aplayer .aplayer-volume-wrap {
+    display: none !important;
+}
+
+.memos-music .aplayer .aplayer-button {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    opacity: 0.6 !important;
+    transition: opacity 0.2s !important;
+}
+
+.memos-music .aplayer .aplayer-button:hover {
+    opacity: 1 !important;
+}
+
+.memos-music .aplayer .aplayer-icon {
+    width: 12px !important;
+    height: 12px !important;
+}

@@ -1,0 +1,289 @@
+/* 友链卡片美化 - 修复右侧溢出问题 */
+.ds-friends {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.ds-friends .grid-box {
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.ds-friends .grid-box::after {
+  content: none !important;
+}
+
+/* 卡片主体 */
+.ds-friends .grid-box .grid-cell.friend-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  writing-mode: horizontal-tb !important;
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  margin: 0 0 16px 0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  min-height: 110px !important;
+  float: none !important;
+  clear: both !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card:last-child {
+  margin-bottom: 0 !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .card-link {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* 头像区域 */
+.ds-friends .grid-box .grid-cell.friend-card .friend-avatar {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin-right: 20px !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  width: 72px !important;
+  min-width: 72px !important;
+  max-width: 72px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .friend-avatar img {
+  width: 72px !important;
+  height: 72px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid #f0f0f0 !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 头像悬停动画 */
+.ds-friends .grid-box .grid-cell.friend-card:hover .friend-avatar img {
+  border-color: #1BCDFC !important;
+  transform: scale(1.1) rotate(6deg) !important;
+  box-shadow: 0 4px 15px rgba(27, 205, 252, 0.3) !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .friend-name {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  margin-top: 8px !important;
+  text-align: center !important;
+  writing-mode: horizontal-tb !important;
+  width: 100% !important;
+  transition: color 0.3s ease !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* 名称悬停变色 */
+.ds-friends .grid-box .grid-cell.friend-card:hover .friend-name {
+  color: #1BCDFC !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .friend-content {
+  flex: 1 !important;
+  min-width: 0 !important;
+  writing-mode: horizontal-tb !important;
+  width: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 描述样式 */
+.ds-friends .grid-box .grid-cell.friend-card .friend-desc {
+  font-size: 15px !important;
+  color: #666 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 14px !important;
+  font-style: italic !important;
+  writing-mode: horizontal-tb !important;
+  white-space: normal !important;
+  word-break: break-all !important;
+  position: relative !important;
+  padding-left: 0 !important;
+  transition: color 0.3s ease !important;
+}
+
+/* 描述悬停变色 */
+.ds-friends .grid-box .grid-cell.friend-card:hover .friend-desc {
+  color: #444 !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .friend-desc::before {
+  content: none !important;
+}
+
+/* 文章列表样式 */
+.ds-friends .grid-box .grid-cell.friend-card .friend-posts {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  writing-mode: horizontal-tb !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .post-item {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  transition: none !important;
+  writing-mode: horizontal-tb !important;
+  position: relative !important;
+  padding-left: 14px !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .post-item::before {
+  content: '|' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 3px !important;
+  font-size: 14px !important;
+  color: #ddd !important;
+  transition: color 0.3s ease !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .post-item:hover::before {
+  color: #1BCDFC !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .post-title {
+  font-size: 13px !important;
+  color: #444 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  flex: none !important;
+  margin-right: 0 !important;
+  padding-bottom: 3px !important;
+  transition: color 0.3s ease !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .post-item:hover .post-title {
+  color: #1BCDFC !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .post-date {
+  font-size: 11px !important;
+  color: #999 !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  transition: color 0.3s ease !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card .post-item:hover .post-date {
+  color: #666 !important;
+}
+
+/* 清除默认样式干扰 */
+.ds-friends .grid-box .grid-cell.friend-card * {
+  box-sizing: border-box !important;
+}
+
+.ds-friends .grid-box .grid-cell.friend-card::after {
+  display: none !important;
+}
+
+/* 移除 grid-cell 默认样式 */
+.ds-friends .grid-box .grid-cell {
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 确保所有元素都不溢出 */
+.ds-friends * {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card {
+  background: #1a1a1a !important;
+  border-color: #2a2a2a !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card .friend-name {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card:hover .friend-name {
+  color: #1BCDFC !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card .friend-desc {
+  color: #666 !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card:hover .friend-desc {
+  color: #999 !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card .post-item::before {
+  color: #444 !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card .post-item:hover::before {
+  color: #1BCDFC !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card .post-title {
+  color: #ccc !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card .post-item:hover .post-title {
+  color: #1BCDFC !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card .post-date {
+  color: #666 !important;
+}
+
+[data-theme="dark"] .ds-friends .grid-box .grid-cell.friend-card .post-item:hover .post-date {
+  color: #999 !important;
+}
